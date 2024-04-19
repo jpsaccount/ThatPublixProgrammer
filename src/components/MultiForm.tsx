@@ -1,6 +1,6 @@
 import { PolButton } from "@/components/polComponents/PolButton";
 import useMultistepForm from "@/customHooks/useMultistepForm";
-import { isNullOrWhitespace } from "@/sdk/utils/stringUtils";
+import { isNullOrWhitespace } from "@/utilities/stringUtils";
 import { Box, Step, StepLabel, Stepper } from "@mui/material";
 import { FormEvent, ReactNode, useEffect, useMemo, useState } from "react";
 import PolLoadingSection from "./polComponents/PolLoadingSection";

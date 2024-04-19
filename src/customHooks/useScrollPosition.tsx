@@ -1,4 +1,4 @@
-import { isUsable } from "@/sdk/utils/usabilityUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
 import { useState, useEffect, RefObject, useMemo } from "react";
 
 const useScrollPosition = (elementRef?: RefObject<HTMLElement>) => {

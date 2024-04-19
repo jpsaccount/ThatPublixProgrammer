@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { deepEquals } from "@sdk/./utils/equalityUtils";
+import { deepEquals } from "@/utilities/equalityUtils";
 
 interface Props {
   containerRef?: React.MutableRefObject<null>;

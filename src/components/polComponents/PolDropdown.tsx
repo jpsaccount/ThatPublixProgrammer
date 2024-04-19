@@ -1,11 +1,10 @@
 import useDevice from "@/customHooks/useDevice";
 import { cn } from "@/lib/utils";
 import { Autocomplete, TextField } from "@mui/material";
-import { isUsable } from "@sdk/./utils/usabilityUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
 import { HtmlHTMLAttributes, ReactNode, useEffect, useState } from "react";
 import { LabelSection } from "../LabelSection/LabelSection";
-import LiveChangeIndicator from "../LiveChangeIndicator";
-import { isNullOrWhitespace } from "@/sdk/utils/stringUtils";
+import { isNullOrWhitespace } from "@/utilities/stringUtils";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const styles = {
@@ -238,7 +237,6 @@ export function PolDropdown<T extends {}>({
       </SelectContent>
     </Select>
   );
-  component = <LiveChangeIndicator value={value}>{component}</LiveChangeIndicator>;
 
   if (isUsable(label)) {
     return (

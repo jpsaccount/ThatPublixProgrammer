@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { isNullOrWhitespace } from "@/sdk/utils/stringUtils";
-import { isUsable } from "@/sdk/utils/usabilityUtils";
+import { isNullOrWhitespace } from "@/utilities/stringUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
 import { UseMutationResult } from "@tanstack/react-query";
 import PolText from "./PolText";
 

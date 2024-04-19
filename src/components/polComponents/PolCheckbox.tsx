@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 import { Checkbox } from "@nextui-org/react";
-import LiveChangeIndicator from "../LiveChangeIndicator";
 
 interface Props {
   children?: ReactNode;
@@ -19,13 +18,11 @@ const PolCheckbox = ({ children, onClick, value: isChecked = false, onValueChang
   };
 
   return (
-    <LiveChangeIndicator value={isChecked}>
-      <div className={className}>
-        <Checkbox onClick={onClick} isSelected={isChecked} onValueChange={handleChange} color="primary">
-          {children && children}
-        </Checkbox>
-      </div>
-    </LiveChangeIndicator>
+    <div className={className}>
+      <Checkbox onClick={onClick} isSelected={isChecked} onValueChange={handleChange} color="primary">
+        {children && children}
+      </Checkbox>
+    </div>
   );
 };
 

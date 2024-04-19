@@ -1,7 +1,7 @@
 import { getService } from "@sdk/./services/serviceProvider";
-import { LocalStorageService } from "@sdk/.";
 import { useCallback, useEffect, useState } from "react";
-import { isUsable } from "@sdk/./utils/usabilityUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
+import { LocalStorageService } from "@/sdk/services/LocalStorageService";
 
 export function useLocalStorageState<T>(
   key: string,

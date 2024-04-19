@@ -1,4 +1,4 @@
-import { isUsable } from "@/sdk/utils/usabilityUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
 import { cn } from "@nextui-org/react";
 import { ReactNode, useState, useLayoutEffect, useMemo } from "react";
 import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTrigger } from "../ui/dialog";

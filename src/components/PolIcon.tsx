@@ -2,9 +2,9 @@ import { cn } from "@/lib/utils";
 import { LucideProps } from "lucide-react";
 import { useEffect, useState } from "react";
 import PolSkeleton from "./polComponents/PolSkeleton";
-import { isUsable } from "@/sdk/utils/usabilityUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
-import { isNullOrWhitespace } from "@/sdk/utils/stringUtils";
+import { isNullOrWhitespace } from "@/utilities/stringUtils";
 
 class Props implements LucideProps {
   invertIconColors?: boolean;

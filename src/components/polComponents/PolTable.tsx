@@ -1,6 +1,6 @@
 import { Table, TableBody, TableHeader } from "@/components/ui/table";
 import { withComponentMemo } from "@/customHooks/withComponentMemo";
-import { deepEquals } from "@sdk/./utils/equalityUtils";
+import { deepEquals } from "@/utilities/equalityUtils";
 
 interface Props<T> extends React.HTMLAttributes<unknown> {
   items: T[];

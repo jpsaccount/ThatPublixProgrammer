@@ -1,4 +1,3 @@
-import { Entity } from "../contracts/Entity";
 import { isUsable } from "./usabilityUtils";
 
 export function tryGetSum(itemsArray: number[], defaultValue: number = 0) {
@@ -68,31 +67,6 @@ export function groupBy<T>(list: T[], key: string | ((item: T) => any)): Map<any
 }
 
 type MergeFunction<T> = (original: T, update: T) => T;
-
-export function addOrUpdate<T extends Entity>(
-  originalEntities: T[],
-  updatedEntities: T[],
-  mergeFunction?: MergeFunction<T>,
-): T[] {
-  const updatesMap = new Map<string, T>(updatedEntities.map((e) => [e.id, e]));
-
-  const merged = originalEntities.map((origEntity) => {
-    const update = updatesMap.get(origEntity.id);
-    if (update) {
-      const effectiveMergeFunction = mergeFunction || ((original, updated) => updated);
-      return effectiveMergeFunction(origEntity, update);
-    }
-    return origEntity;
-  });
-
-  updatedEntities.forEach((updEntity) => {
-    if (!originalEntities.find((origEntity) => origEntity.id === updEntity.id)) {
-      merged.push(updEntity);
-    }
-  });
-
-  return merged;
-}
 
 export function selectByMin<T>(items: T[], action: (item: T) => unknown): T {
   return items.reduce((min, current) => {

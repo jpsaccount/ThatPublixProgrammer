@@ -1,13 +1,13 @@
 import PolIcon from "@/components/PolIcon";
 import PolSpinner from "@/components/polComponents/PolSpinner";
 import { cn } from "@/lib/utils";
-import { isUsable } from "@sdk/./utils/usabilityUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
 import { UseQueryResult } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "framer-motion";
 import { ReactNode, useMemo } from "react";
 import { PolButton } from "./PolButton";
 import PolText from "./PolText";
-import { isNullOrWhitespace } from "@/sdk/utils/stringUtils";
+import { isNullOrWhitespace } from "@/utilities/stringUtils";
 
 interface Props {
   request: UseQueryResult<unknown, Error>[] | UseQueryResult<unknown, Error>;

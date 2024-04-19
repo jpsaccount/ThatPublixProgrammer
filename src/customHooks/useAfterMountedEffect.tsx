@@ -1,4 +1,4 @@
-import { isDevEnvironment } from "@/sdk/utils/devUtils";
+import { isDevEnvironment } from "@/utilities/devUtils";
 import { isMouseEvent } from "@testing-library/user-event/dist/cjs/event/eventMap.js";
 import React, { useEffect, useRef } from "react";
 

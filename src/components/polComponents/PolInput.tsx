@@ -1,25 +1,9 @@
 import { Textarea } from "@/components/ui/textarea";
-import { isUsable } from "@sdk/./utils/usabilityUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
 import moment, { Moment } from "moment";
-import React, {
-  HTMLInputTypeAttribute,
-  ReactElement,
-  useContext,
-  useEffect,
-  useId,
-  useLayoutEffect,
-  useMemo,
-  useState,
-} from "react";
+import React, { HTMLInputTypeAttribute, ReactElement, useContext, useEffect, useMemo, useState } from "react";
 import { LabelSection } from "../LabelSection/LabelSection";
 import { Input } from "../ui/input";
-import { useBlocker, useRouter } from "@tanstack/react-router";
-
-import LiveChangeIndicator from "../LiveChangeIndicator";
-import { OnValueChangedTriggerContext } from "@/contexts/OnValueChangedTriggerContext";
-import { useNavigate } from "@tanstack/react-router";
-import { delay } from "@/sdk/utils/asyncUtils";
-import { error } from "console";
 
 interface Props<T extends string | string[] | number | Moment | undefined> extends React.HTMLAttributes<any> {
   isDisabled?: boolean;
@@ -58,11 +42,6 @@ function PolInput<T extends string | string[] | number | Moment | undefined>(
     ...props
   } = passedProps;
 
-  const valueChangeOnContext = useContext(OnValueChangedTriggerContext);
-
-  if (valueChangeOnContext && isUsable(valueChangeOn) === false) {
-    valueChangeOn = valueChangeOnContext.trigger;
-  }
   if (isUsable(valueChangeOn) === false) {
     valueChangeOn = "change";
   }
@@ -189,8 +168,6 @@ function PolInput<T extends string | string[] | number | Moment | undefined>(
   ) : (
     input
   );
-
-  input = <LiveChangeIndicator value={value}>{input}</LiveChangeIndicator>;
 
   if (isUsable(label)) {
     return (

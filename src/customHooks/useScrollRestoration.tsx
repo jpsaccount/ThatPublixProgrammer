@@ -1,4 +1,4 @@
-import { isUsable } from "@/sdk/utils/usabilityUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
 import { debounce } from "lodash";
 import React, { useCallback, useEffect, useState } from "react";
 

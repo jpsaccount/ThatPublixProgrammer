@@ -8,11 +8,9 @@ import { LabelSection } from "../LabelSection/LabelSection";
 import { useMemo, useState } from "react";
 import { Moment } from "moment";
 import moment from "moment";
-import { toUtcDate } from "@/sdk/utils/dateUtils";
 import PolIcon from "../PolIcon";
-import { LiveChangeContextProvider } from "@/contexts/LiveChangeContext";
-import LiveChangeIndicator from "../LiveChangeIndicator";
 import PolText from "./PolText";
+import { toUtcDate } from "@/sdk/utils/dateUtils";
 
 interface Props {
   label?: string;
@@ -28,21 +26,19 @@ export function PolDatePicker({ label, value, onValueChanged, isDisabled = false
     <LabelSection label={label} className="w-full">
       <Popover open={open}>
         <PopoverTrigger className="w-full">
-          <LiveChangeIndicator value={value}>
-            <Button
-              disabled={isDisabled}
-              onClick={() => setOpen(true)}
-              variant={"outline"}
-              className={cn(
-                "w-full justify-start bg-[rgba(0,0,0,0.02)] p-0 px-4 text-left font-normal",
-                !value && "text-muted-foreground",
-              )}
-              data-testid={props["data-testid"]}
-            >
-              <PolIcon name="Calendar" className="mr-2 h-4 w-4" />
-              <PolText className="my-auto text-text-950">{value ? value.format("MM-DD-YYYY") : "Pick a date"}</PolText>
-            </Button>
-          </LiveChangeIndicator>
+          <Button
+            disabled={isDisabled}
+            onClick={() => setOpen(true)}
+            variant={"outline"}
+            className={cn(
+              "w-full justify-start bg-[rgba(0,0,0,0.02)] p-0 px-4 text-left font-normal",
+              !value && "text-muted-foreground",
+            )}
+            data-testid={props["data-testid"]}
+          >
+            <PolIcon name="Calendar" className="mr-2 h-4 w-4" />
+            <PolText className="my-auto text-text-950">{value ? value.format("MM-DD-YYYY") : "Pick a date"}</PolText>
+          </Button>
         </PopoverTrigger>
         <PopoverContent
           onInteractOutside={() => setOpen(false)}

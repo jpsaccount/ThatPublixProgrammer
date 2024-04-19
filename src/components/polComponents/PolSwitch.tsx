@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Switch } from "@nextui-org/react";
 import { ReactNode } from "react";
-import LiveChangeIndicator from "../LiveChangeIndicator";
 
 interface PolSwitchProps {
   children: ReactNode;
@@ -12,27 +11,25 @@ interface PolSwitchProps {
 
 export default function PolSwitch({ children, value, onValueChanged, className }: PolSwitchProps) {
   return (
-    <LiveChangeIndicator value={value}>
-      <div className={className}>
-        <Switch
-          isSelected={value}
-          onValueChange={onValueChanged}
-          classNames={{
-            wrapper: "p-0 h-4 overflow-visible",
-            thumb: cn(
-              "w-6 h-6 border-2 shadow-lg",
-              "group-data-[hover=true]:border-primary",
-              //selected
-              "group-data-[selected=true]:ml-6",
-              // pressed
-              "group-data-[pressed=true]:w-7",
-              "group-data-[selected]:group-data-[pressed]:ml-4",
-            ),
-          }}
-        >
-          {children}
-        </Switch>
-      </div>
-    </LiveChangeIndicator>
+    <div className={className}>
+      <Switch
+        isSelected={value}
+        onValueChange={onValueChanged}
+        classNames={{
+          wrapper: "p-0 h-4 overflow-visible",
+          thumb: cn(
+            "w-6 h-6 border-2 shadow-lg",
+            "group-data-[hover=true]:border-primary",
+            //selected
+            "group-data-[selected=true]:ml-6",
+            // pressed
+            "group-data-[pressed=true]:w-7",
+            "group-data-[selected]:group-data-[pressed]:ml-4",
+          ),
+        }}
+      >
+        {children}
+      </Switch>
+    </div>
   );
 }

@@ -6,7 +6,7 @@ import PolModal from "./PolModal";
 import PolText from "./PolText";
 import PolHeading from "./PolHeading";
 import { useContext } from "react";
-import { isNullOrWhitespace } from "@/sdk/utils/stringUtils";
+import { isNullOrWhitespace } from "@/utilities/stringUtils";
 
 export default function PolAlert() {
   const alertContext = useContext(AlertContext);

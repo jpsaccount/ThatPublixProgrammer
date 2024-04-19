@@ -1,6 +1,6 @@
 import { ReactNode, useLayoutEffect, useState } from "react";
 import { PolBaseModal, PolModalProps } from "./PolBaseModal";
-import { isUsable } from "@/sdk/utils/usabilityUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
 
 export default function PolSideSheet({
   isOpen,

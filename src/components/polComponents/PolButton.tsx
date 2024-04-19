@@ -3,7 +3,7 @@ import { Fade } from "@chakra-ui/react";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import PolSpinner from "../polComponents/PolSpinner";
 import { Button } from "../ui/button";
-import { isUsable } from "@/sdk/utils/usabilityUtils";
+import { isUsable } from "@/utilities/usabilityUtils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Link } from "@tanstack/react-router";
 

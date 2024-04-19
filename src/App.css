@@ -1,0 +1,123 @@
+.root {
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.InovuaReactDataGrid__row {
+  @apply hover:cursor-pointer;
+}
+
+.InovuaReactDataGrid__row--group-row {
+  @apply hover:cursor-default;
+}
+
+.css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {
+  @apply text-black dark:text-gray-100;
+}
+
+.css-wb57ya-MuiFormControl-root-MuiTextField-root {
+  @apply bg-background-50  dark:bg-background-200;
+}
+
+.css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root {
+  @apply border dark:border-gray-600;
+}
+
+.Mui-expanded {
+  @apply border-none outline-none;
+}
+
+.Mui-focused {
+  @apply border-none outline-none;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  @apply dark:text-gray-600;
+}
+
+.css-qzbt6i-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator:hover {
+  @apply dark:bg-background-200;
+}
+.css-9e5uuu-MuiPaper-root-MuiAutocomplete-paper {
+  @apply bg-white dark:bg-background-200;
+}
+.css-gdh49b-MuiAutocomplete-listbox {
+  @apply dark:text-white;
+}
+.css-gdh49b-MuiAutocomplete-listbox .MuiAutocomplete-option.Mui-focused {
+  @apply dark:text-white;
+}
+
+.MuiAutocomplete-noOptions {
+  @apply dark:text-white;
+}
+.css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root {
+  @apply border-none;
+}
+#root {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+.no-shadow-input input {
+  box-shadow: none;
+}
+
+select {
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  width: 100%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
+select::before,
+select::after {
+  --size: 0.3rem;
+  position: absolute;
+  content: "";
+  right: 1rem;
+  pointer-events: none;
+}
+
+select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+  top: 40%;
+}
+
+select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 55%;
+}
+
+.sticky-Accordian-Header > * > h3:first-child {
+  position: sticky;
+  top: 108px;
+}

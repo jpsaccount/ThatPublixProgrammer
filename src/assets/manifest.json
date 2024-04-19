@@ -1,0 +1,17 @@
+{
+  "display": "standalone",
+  "orientation": "portrait",
+  "short_name": "Portal One",
+  "name": "Portal One",
+  "icons": [
+    {
+      "src": "./images/favicon.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#dde6ff",
+  "scope": "/",
+  "theme_color": "#dde6ff"
+}

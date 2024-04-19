@@ -1,0 +1,11 @@
+label {
+  font-weight: normal;
+  line-height: normal;
+  text-align: left;
+}
+
+section {
+  display: grid;
+  grid-auto-rows: auto 1fr;
+  flex-direction: column;
+}

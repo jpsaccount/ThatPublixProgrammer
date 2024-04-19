@@ -1,0 +1,79 @@
+{
+  "Reason": "",
+  "TenantExists": false,
+  "LoginSuccessful": true,
+  "NeedsMFA": false,
+  "ShouldConfirmEmail": false,
+  "ShouldConfirmPhoneNumber": false,
+  "MFAContextId": null,
+  "CensoredMFAResource": null,
+  "MfaAuthenticationType": null,
+  "AuthenticationToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjIiLCJqdGkiOiI3NjM0YmNhNy1jZTFkLTRhZWItOGEzMS1kNTE0YzUwMDYzMWUiLCJpZCI6Ijg0NDI3NTE0LTZlN2UtNDY0YS04OTgzLWRjYmJkNWIyNmE3OSIsImRvbWFpbiI6InBvbHN0dWRpb3MuY29tIiwibmJmIjoxNzAyMzQ1NjQwLCJleHAiOjE3MzM5NjgwNDAsImlhdCI6MTcwMjM0NTY0MH0.jo9rrXh7msHE9nJs9dYe83iR7DjSTSquUIVE9oR4IKQ",
+  "RefreshToken": "19c03843-9d01-43fe-8de0-a6eada87b483",
+  "UserId": "2",
+  "AccessTokenValidTo": "2024-12-12T01:47:20.6575458+00:00",
+  "RefreshTokenValidTo": "2024-06-12T01:47:20.7363507+00:00",
+  "User": {
+    "PositionTitle": "",
+    "OfficeId": "",
+    "Extension": "",
+    "Person": {
+      "Name": "JP Martinezx",
+      "HomeAddress": {
+        "FullAddress": "",
+        "Street": null,
+        "City": null,
+        "State": null,
+        "Zipcode": null,
+        "Country": null,
+        "IsTrackingEvents": true,
+        "HasChanges": true,
+        "Id": "365f4849-4930-4e5e-bd4a-dc9442e3ea0b"
+      },
+      "LegalName": {
+        "First": "Jon Paul",
+        "Middle": "",
+        "Last": "Martinez",
+        "IsTrackingEvents": true,
+        "HasChanges": true,
+        "Id": "164c7dfa-0746-4fae-b568-48b51e9a5132"
+      },
+      "PreferredName": {
+        "First": "JP",
+        "Middle": "",
+        "Last": "Martinezx",
+        "IsTrackingEvents": true,
+        "HasChanges": true,
+        "Id": "e6865545-9f3f-425f-9b2c-54551092e3a1"
+      },
+      "DateOfBirth": null,
+      "Emails": [],
+      "HomePhone": "",
+      "CellPhone": "",
+      "Notes": "",
+      "IsTrackingEvents": true,
+      "HasChanges": true,
+      "Id": "d53e6518-7cd1-4708-9f88-e165f864bdd1"
+    },
+    "Status": {
+      "Description": "",
+      "Id": -1,
+      "Title": "Unknown"
+    },
+    "StatusReason": "",
+    "TenantId": "1",
+    "IdentityId": "84427514-6e7e-464a-8983-dcbbd5b26a79",
+    "AcceptTokenFrom": "0001-01-01T00:00:00-05:00",
+    "Access": [
+      32, 41, 39, 29, 31, 2, 33, 35, 36, 16, 1, 24, 25, 14, 12, 10, 11, 15, 22, 13, 3, 8, 5, 9, 17, 26, 19, 20, 21, 23,
+      28, 30
+    ],
+    "_etag": "\"6d001133-0000-0100-0000-654ad1ec0000\"",
+    "CreatedDateTime": "2023-11-08T00:10:19.1028593",
+    "ModifiedDateTime": "2023-11-08T00:10:19.1028921",
+    "CreatedByUserId": "2",
+    "ModifiedByUserId": "2",
+    "DeletedDateTime": null,
+    "id": "2"
+  }
+}

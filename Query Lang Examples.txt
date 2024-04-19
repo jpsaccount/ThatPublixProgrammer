@@ -1,0 +1,66 @@
+Examples:
+
+Normal:
+
+SELECT * FROM c
+SELECT * FROM c WHERE c.Person.Name = "Jon Paul Martinez"
+SELECT * FROM x WHERE x.Person.Name = "Jon Paul Martinez"
+WHERE c.Person.Name = "Jon Paul Martinez"
+
+
+Search:
+Same as normal queries but the first parameter will always be what the search results be. So if you search for UserId and Description and want the description as a result, make sure description is first.
+
+Dates:
+
+SELECT * FROM c
+SELECT * FROM c WHERE c.ActivityDate >= "YYYY-MM-DDThh:mm:sss"
+SELECT * FROM c WHERE c.ActivityDate = "YYYY-MM-DDThh:mm:sss"
+SELECT * FROM c WHERE c.ActivityDate < "YYYY-MM-DDThh:mm:sss"
+
+Array:
+
+SELECT * FROM c
+SELECT * FROM c WHERE c.Person.Name IN ["Jon Paul Martinez", "Tim"]
+SELECT * FROM x WHERE x.Person.Name  IN ["Jon Paul Martinez", "Tim"]
+WHERE c.Person.Name  IN ["Jon Paul Martinez", "Tim"]
+
+NestedQueries:
+
+SELECT * FROM c
+SELECT * FROM c WHERE Query("5cead365-6ea3-456f-af37-7319d76bf26e", c.OfficeId).Address.Street = "218 E Park Street"
+SELECT * FROM x WHERE Query("5cead365-6ea3-456f-af37-7319d76bf26e", x.OfficeId).Address.Street = "218 E Park Street"
+Query("5cead365-6ea3-456f-af37-7319d76bf26e", c.OfficeId).Address.Street = "218 E Park Street"
+
+Paged Response:
+(Getting page 2)
+"Paged(*, {Page}, {Items Per Page})"
+
+SELECT Paged(*, 2, 150) FROM c
+SELECT Paged(*, 2, 150) FROM c WHERE c.Person.Name = "Jon Paul Martinez"
+SELECT Paged(*, 2, 150) FROM x WHERE x.Person.Name = "Jon Paul Martinez"
+
+
+Order By:
+
+SELECT * FROM c OFFSET 30 LIMIT 50
+SELECT * FROM c WHERE c.Person.Name = "Jon Paul Martinez" Order By c.Person.Name ASC
+SELECT * FROM x WHERE x.Person.Name = "Jon Paul Martinez" Order By x.Person.Name DESC, x.Address.Street ASC
+WHERE c.Person.Name = "Jon Paul Martinez" Order By c.Person.Name DESC
+
+Offset and Limit:
+
+SELECT * FROM c OFFSET 30 LIMIT 50
+SELECT * FROM c WHERE c.Person.Name = "Jon Paul Martinez" OFFSET 30 LIMIT 50
+SELECT * FROM x WHERE x.Person.Name = "Jon Paul Martinez" OFFSET 30 LIMIT 50
+WHERE c.Person.Name = "Jon Paul Martinez" OFFSET 30 LIMIT 50
+
+
+Multiple Conditions:
+Supported Values: "and", "or"
+
+SELECT * FROM c WHERE c.Person.Name = "Jon Paul Martinez" or c.Person.Name = "Bradley Evans"
+SELECT * FROM c WHERE c.Person.Name = "Jon Paul Martinez" and c.Person.Name = "Bradley Evans"
+SELECT * FROM c WHERE c.Person.Name = "Jon Paul Martinez" and (c.Person.Name = "Bradley Evans" or c.DrummingStatus = "Goated")
+
+
